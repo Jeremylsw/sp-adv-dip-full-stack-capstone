@@ -1,1 +1,4 @@
-# sp-adv-dip-full-stack-capstone
+cd FrontEnd
+npm install
+npm start
+start index.html on live server

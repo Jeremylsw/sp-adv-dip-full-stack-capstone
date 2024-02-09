@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "d59f1b1c-4865-48d8-ac67-88f8732ce1ac",
+		"name": "Assignment 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28557585"
+	},
+	"item": [
+		{
+			"name": "AdminLogin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AddListing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "3D3N Japan",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Japan Trip",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Japan",
+							"type": "text"
+						},
+						{
+							"key": "travelPeriod",
+							"value": "Jan 2023",
+							"type": "text"
+						},
+						{
+							"key": "imageURL",
+							"value": "https://www.istockphoto.com/photo/fuji-japan-in-spring-gm876560704-244648857",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/admin/addListing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"addListing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateListing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklEIjoxLCJhZG1pbk5hbWUiOiJKZXJlbXkiLCJpYXQiOjE3MDM0MzUxMzIsImV4cCI6MTcwMzQzODczMn0.crLNEOk_RvhYQLrtSQ25o1ollrkPEvK6P6PWeJbbrIo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "3D3N Japan Trip",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "travelPeriod",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "imageURL",
+							"value": "www.google.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/admin/updateListing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"updateListing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddItinerary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/admin/addItinerary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"addItinerary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RmItinerary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklEIjoxLCJhZG1pbk5hbWUiOiJKZXJlbXkiLCJpYXQiOjE3MDM0MzkyMzksImV4cCI6MTcwMzQ0MjgzOX0.O5hXUf3G4tFeiPq4C-BoyCes_QeA_JCGbSDXe0-1eBA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "travelID",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "day",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/admin/rmItinerary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"rmItinerary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/public/getListings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"public",
+						"getListings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListingBySSorCountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/public/getListings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"public",
+						"getListings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItineraryByTravelID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/public/getItineraryByTravelID?travelID=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"public",
+						"getItineraryByTravelID"
+					],
+					"query": [
+						{
+							"key": "travelID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
